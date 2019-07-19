@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{25EC5104-8AD4-3605-A382-65B47700DF67}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

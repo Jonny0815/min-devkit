@@ -1,0 +1,15 @@
+﻿  troubadix.cpp
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-api\include\c74_min_atom.h(359,24): warning C4244:  "=": Konvertierung von "c74::max::t_atom_long" in "_Ty", möglicher Datenverlust
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-api\include\c74_min_atom.h(359,24): warning C4244:         with
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-api\include\c74_min_atom.h(359,24): warning C4244:         [
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-api\include\c74_min_atom.h(359,24): warning C4244:             _Ty=int
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-api\include\c74_min_atom.h(359,24): warning C4244:         ]
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(41,9): warning C4068:  Unbekanntes Pragma
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(42,9): warning C4068:  Unbekanntes Pragma
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(186,9): warning C4068:  Unbekanntes Pragma
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(187,9): warning C4068:  Unbekanntes Pragma
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(216,9): warning C4068:  Unbekanntes Pragma
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(217,9): warning C4068:  Unbekanntes Pragma
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(40,15): warning C4244:  "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
+     Bibliothek "D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.lib" und Objekt "D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.exp" werden erstellt.
+  troubadix.vcxproj -> D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\externals\troubadix.mxe64

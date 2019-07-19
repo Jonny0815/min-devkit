@@ -17,3 +17,7 @@ tmp
 
 package-info.json
 
+/x64/Debug/ZERO_CHECK
+/packages
+/CMakeFiles
+/.vs
