@@ -4,6 +4,5 @@
     <CustomBuild Include="D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -10,6 +10,6 @@ D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(187,9): warning C4068:  Unbekanntes Pragma
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(216,9): warning C4068:  Unbekanntes Pragma
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(217,9): warning C4068:  Unbekanntes Pragma
-D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(40,15): warning C4244:  "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
-     Bibliothek "D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.lib" und Objekt "D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.exp" werden erstellt.
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(71,79): warning C4244:  "+=": Konvertierung von "double" in "int", möglicher Datenverlust
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(223,1): warning C4267:  "Argument": Konvertierung von "size_t" nach "int", Datenverlust möglich
   troubadix.vcxproj -> D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\externals\troubadix.mxe64
