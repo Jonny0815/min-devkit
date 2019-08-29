@@ -9,6 +9,8 @@
 #include <thread>
 #include <shared_mutex>
 
+#include <iostream>
+#include <fstream>
 
 using namespace c74::min;
 
@@ -20,6 +22,10 @@ public:
 	};
 
 	friend bool operator==(const bar& b1, const bar& b2);
+
+	vector<audio_bundle*>* get_audio() {
+		return audio;
+	}
 
 private:
 	vector<audio_bundle*>* audio;
@@ -46,6 +52,8 @@ private:
 
 
 bool operator==(const bar& b1, const bar& b2) {
+
+	std::cout << "now in overloaded operator" << endl;
 
 	size_t size = 0;
 	int    diff = 0;
@@ -89,7 +97,7 @@ public:
 	MIN_RELATED {""};
 
 	inlet<> m_inlet1 {this, "(signal) input 1"};
-	inlet<> m_inlet2 {this, "(signal) input 2"};
+	//inlet<> m_inlet2 {this, "(signal) input 2"};
 
 	/*outlet<> m_outlet1 {
 		this,
@@ -128,6 +136,8 @@ public:
 					cout << "pushed bar (length " << bar_buffer[!bar_buffer_select]->size() << ") into bars" << endl;
 					bar_buffer[!bar_buffer_select] = new vector<audio_bundle*>;
 
+					//loopcreate();
+
 					return {};
 
 				}
@@ -163,10 +173,35 @@ troubadix() {
 
 	// delete t_loopcreate;
 
+	std::ofstream savefile;
+
+	savefile.open("save.txt");
+
 	for (size_t i = 0; i < current_bars.size(); i++) {
+
+		for (size_t j = 0; j < current_bars.at(i)->get_audio()->size(); j++) {
+
+			for (size_t k = 0; k < current_bars.at(i)->get_audio()->at(j)->frame_count(); k++) {
+
+				
+					savefile << std::fixed << current_bars.at(i)->get_audio()->at(j)->samples(0)[k] *1000 << "-";
+				
+					
+
+			}
+
+			savefile << "\n";
+
+			delete current_bars.at(i)->get_audio()->at(j)->samples(0);
+
+		}
+
+		savefile << "bar size:" << current_bars.at(i)->get_audio()->size() << " \r\n";
 
 		delete current_bars.at(i);
 	}
+
+	savefile.close();
 
 	// TODO: save all loops
 }
@@ -195,42 +230,67 @@ loop*         active_loop = NULL;    // the loop thats currently playing
 std::shared_mutex bar_lock;
 // std::thread* t_loopcreate;
 
+//void loopcreate() {
+//
+//	cout << "now trying to create loop" << endl;
+//
+//	if (current_bars.size() < 2) {    // current_bars needs 2 bar, no comparison otherwise
+//
+//		cout << "fewer than 2 bars" << endl;
+//
+//		return;
+//	}
+//
+//	bool found_loop = false;
+//
+//	for (size_t i = 1; i <= 16; (i * 2)) {    // doubleing bar size at each iteration
+//
+//		cout << "debug i*2 in loopdetection: " << i << endl;
+//
+//			if (i <= current_bars.size()) {
+//
+//			for (size_t j = 0; j < i; j++) {
+//
+//				if (current_bars.at(current_bars.size() - j)->get_audio()->size() != current_bars.at(current_bars.size() - j - i)->get_audio()->size()) {
+//
+//					delete current_bars.at(current_bars.size() - j);
+//
+//					if (current_bars.size() < 2) {    // current_bars needs 2 bar, no comparison otherwise
+//
+//						cout << "fewer than 2 bars" << endl;
+//
+//						return;
+//					}
+//
+//				}
+//
+//				if (current_bars.at(current_bars.size() - j) == current_bars.at(current_bars.size() - i - j)) {    // comparing last bar with last bar - loopsize, iterating possible loop length via j
+//					found_loop = true;
+//				}
+//				else {
+//					found_loop = false;
+//				}
+//			}
+//
+//			if (found_loop) {    // if no brain damage on my side: loop found with lenght between 1 and 16
+//
+//				active_loop = new loop(current_bars, i);
+//
+//				cout << "found loop!" << endl;
+//
+//				loop_lookup(active_loop);
+//			}
+//		}
+//		else {
+//			return;
+//		}
+//	}
+//}
+
 void loopcreate() {
 
-	if (current_bars.size() < 2) {    // current_bars needs 2 bar, no comparison otherwise
-		return;
-	}
 
-	bool found_loop = false;
 
-	for (size_t i = 1; i <= 16; (i * 2)) {    // doubleing bar size at each iteration
-
-		cout << "debug i*2 in loopdetection: " << i << endl;
-
-			if (i <= current_bars.size()) {
-
-			for (size_t j = 0; j < i; j++) {
-				if (current_bars.back() - j
-					== current_bars.back() - i
-						- j) {    // comparing last bar with last bar - loopsize, iterating possible loop length via j
-					found_loop = true;
-				}
-				else {
-					found_loop = false;
-				}
-			}
-
-			if (found_loop) {    // if no brain damage on my side: loop found with lenght between 1 and 16
-
-				active_loop = new loop(current_bars, i);
-
-				loop_lookup(active_loop);
-			}
-		}
-		else {
-			return;
-		}
-	}
 }
 
 void loop_lookup(loop* loop_h) {
