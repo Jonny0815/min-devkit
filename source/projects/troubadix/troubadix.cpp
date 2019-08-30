@@ -5,6 +5,8 @@
 #include "c74_min.h"
 #include "c74_min_catch.h"
 
+#include "..//..//..//packages/libfftw.3.3.4/build/native/include/fftw3.h"
+
 #include <vector>
 #include <thread>
 #include <shared_mutex>
@@ -19,6 +21,8 @@ public:
 	bar(vector<audio_bundle*>* audio_h) {
 
 		audio = audio_h;
+		
+
 	};
 
 	friend bool operator==(const bar& b1, const bar& b2);
@@ -28,7 +32,10 @@ public:
 	}
 
 private:
-	vector<audio_bundle*>* audio;
+	vector<audio_bundle*>* audio; //TODO: remove before deploy! only for debug saving
+
+	fftw_complex* ft = NULL;
+
 };
 
 
@@ -53,39 +60,7 @@ private:
 
 bool operator==(const bar& b1, const bar& b2) {
 
-	std::cout << "now in overloaded operator" << endl;
-
-	size_t size = 0;
-	int    diff = 0;
-	if (b1.audio->size() < b2.audio->size()) {
-		size = b1.audio->size();
-	}
-	else {
-		size = b2.audio->size();
-	}
-
-	for (size_t i = 0; i < size; i++) {
-
-		int frame_count = 0;
-
-		if (b1.audio->at(i)->frame_count() < b2.audio->at(i)->frame_count()) {
-			frame_count = b1.audio->at(i)->frame_count();
-		}
-		else {
-			frame_count = b2.audio->at(i)->frame_count();
-		}
-		for (size_t j = 0; j < frame_count; j++) {
-
-			diff += b1.audio->at(i)->samples()[0][j] - b2.audio->at(i)->samples()[0][j];
-		}
-	}
-
-	if (diff == 0) {
-		return true;
-	}
-	else {
-		return false;
-	}
+	return true;
 }
 
 
