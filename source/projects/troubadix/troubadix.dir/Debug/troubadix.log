@@ -10,7 +10,7 @@ D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(187,9): warning C4068:  unknown pragma
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(216,9): warning C4068:  unknown pragma
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(217,9): warning C4068:  unknown pragma
-D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(79,79): warning C4244:  '+=': conversion from 'double' to 'int', possible loss of data
-D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(79,79): warning C4244: D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-api\include\c74_min_atom.h(23) : warning C4717: 'c74::min::atom::atom<c74::min::logger_line_ending,0>': recursive on all control paths, function will cause runtime stack overflow
-     Creating library D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.lib and object D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.exp
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(281,1): warning C4305:  'initializing': truncation from 'double' to 'float'
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(282,1): warning C4305:  'initializing': truncation from 'double' to 'float'
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(375,14): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
   troubadix.vcxproj -> D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\externals\troubadix.mxe64
