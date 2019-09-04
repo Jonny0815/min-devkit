@@ -12,5 +12,6 @@ D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\min-lib\include\c74_lib_limiter.h(217,9): warning C4068:  unknown pragma
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(281,1): warning C4305:  'initializing': truncation from 'double' to 'float'
 D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(282,1): warning C4305:  'initializing': truncation from 'double' to 'float'
-D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(375,14): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\source\projects\troubadix\troubadix.cpp(377,14): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+     Creating library D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.lib and object D:/Users/Jonny0815/Documents/Max 8/Packages/troubadix/source/projects/troubadix/Debug/troubadix.exp
   troubadix.vcxproj -> D:\Users\Jonny0815\Documents\Max 8\Packages\troubadix\externals\troubadix.mxe64

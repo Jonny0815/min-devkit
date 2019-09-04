@@ -365,12 +365,14 @@ void loopcreate() {
 
 							loop_check_boundry++;
 
-							cout << "loop_check_boundry: " << loop_check_boundry << endl;
+							//cout << "loop_check_boundry: " << loop_check_boundry << endl;
 
 						}
 					}
 				}
 			}
+
+			cout << "loop_check_boundry: " << loop_check_boundry << endl;
 
 			int limit = active_loop->get_bars()->at(0)->get_audio()->size() * 64 * boundry_lc; // resolution of each sample is 64 frequencies 
 
